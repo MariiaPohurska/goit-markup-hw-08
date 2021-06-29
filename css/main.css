@@ -121,6 +121,7 @@ body.modal-open {
 @media screen and (max-width: 767px) {
   .mobile-menu {
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     width: 100vw;
@@ -1030,6 +1031,10 @@ body.modal-open {
   overflow: hidden;
 }
 
+.project-list__img {
+  width: 100%;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -1111,7 +1116,12 @@ body.modal-open {
 
 .footer__adress-list {
   margin-top: 20px;
-  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer__adress-list {
+    margin-bottom: 60px;
+  }
 }
 
 .footer__contact-link {
@@ -1147,10 +1157,6 @@ body.modal-open {
 .adress-list__link {
   color: var(--text-on-dark-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-list {
-  margin-bottom: 60px;
 }
 
 .social-list__link_footer {
@@ -1238,6 +1244,9 @@ body.modal-open {
   .footer {
     text-align: center;
   }
+  .footer__social-list {
+    margin-bottom: 60px;
+  }
   .subscription__input {
     width: 100%;
     margin-bottom: 20px;
@@ -1252,19 +1261,26 @@ body.modal-open {
     display: flex;
     align-items: baseline;
     justify-content: space-around;
-    text-align: center;
   }
   .adress-list__item:not(:last-child) {
     margin-bottom: 8px;
-  }
-  .form-subscription__wrap {
-    text-align: center;
   }
   .subscription__input {
     display: block;
     width: 450px;
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__wrap {
+    text-align: center;
+  }
+  .form-subscription__wrap {
+    text-align: center;
+  }
+  .subscription__input {
     margin-bottom: 20px;
   }
 }

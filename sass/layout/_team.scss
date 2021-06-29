@@ -38,8 +38,6 @@
 // 0-767px
 @media screen and (max-width: 767px) {
   .team-list {
-    // max-width: 450px;
-
     &__item:not(:last-child) {
       margin-bottom: 30px;
     }
